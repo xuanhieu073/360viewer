@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360 viewer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div x-data="pano">
+    <div id="overview" x-show="show === 'overview'">
+      <img src="./fatory.jpg" alt="fatory image">
+      <img src="./mark.svg" class="mark mark1" alt="mark" @click="showPano('outside')">
+      <img src="./mark.svg" class="mark mark2" alt="mark" @click="showPano('office')">
+      <img src="./mark.svg" class="mark mark3" alt="mark" @click="showPano('room')">
+    </div>
+    <div id="pano">
+      <div id="panorama" x-show="show === 'panorama'">
+      </div>
+      <div id="controls" x-show="show === 'panorama'">
+        <div class="ctrl" id="back" @click="show = 'overview'; viewer.destroy()">&#9650;</div>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  <script src="./app.js"></script>
+</body>
+</html>

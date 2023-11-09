@@ -1,0 +1,57 @@
+#panorama, #overview {
+  width: 100vw;
+  height: 800px;
+}
+
+#overview, #pano {
+  position: relative;
+}
+
+#overview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#overview .mark {
+  position: absolute;
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+}
+
+#overview .mark1 {
+  top: 33%;
+  left: 20%;
+}
+
+#overview .mark2 {
+  top: 50%;
+  left: 50%;
+}
+
+#overview .mark3 {
+  top: 17%;
+  left: 70%;
+}
+
+
+#controls {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 3px;
+}
+.ctrl {
+  padding: 8px 5px;
+  width: 30px;
+  text-align: center;
+  background: rgba(200, 200, 200, 0.8);
+  display: inline-block;
+  cursor: pointer;
+}
+.ctrl:hover {
+  background: rgba(200, 200, 200, 1);
+}
